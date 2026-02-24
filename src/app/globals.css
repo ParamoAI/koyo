@@ -1,5 +1,33 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+
+  --color-koyo-900: #021E1A;
+  --color-koyo-800: #03302A;
+  --color-koyo-700: #0A5045;
+  --color-koyo-600: #127062;
+  --color-koyo-500: #1A9080;
+  --color-koyo-400: #4DA396;
+  --color-koyo-300: #7DBFB5;
+  --color-koyo-200: #B5DBD5;
+  --color-koyo-100: #E0F0ED;
+  --color-koyo-50: #F0F8F6;
+
+  --color-warm-500: #C4873B;
+  --color-warm-400: #D4A05A;
+  --color-warm-300: #E4BC82;
+  --color-warm-200: #F0D9B5;
+  --color-warm-100: #FAF0E4;
+
+  --color-sage-600: #303F2E;
+  --color-sage-500: #4A6347;
+  --color-sage-400: #7B9E76;
+  --color-sage-300: #A3BF9E;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -7,33 +35,18 @@
 }
 
 @layer utilities {
-  @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient-shift 8s ease infinite;
-  }
   @keyframes fade-up {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
   }
   .animate-fade-up {
-    animation: fade-up 0.6s ease-out forwards;
+    animation: fade-up 0.7s ease-out forwards;
   }
   @keyframes count-up {
-    from { opacity: 0; transform: scale(0.5); }
+    from { opacity: 0; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1); }
   }
   .animate-count {
     animation: count-up 0.8s ease-out forwards;
-  }
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6); }
-  }
-  .animate-pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
   }
 }
